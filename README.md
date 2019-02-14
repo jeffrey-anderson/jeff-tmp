@@ -1,5 +1,8 @@
 ```
+# Switch to root
 sudo -i
+
+# After entering your password copy / paste the command below in blocks:
 
 groupadd developers
 
@@ -10,9 +13,11 @@ cd software
 
 curl -L -b "oraclelicense=a" https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.tar.gz -O
 tar xvzf jdk-8u201-linux-x64.tar.gz
+
 mv jdk1.8.0_201 /opt
 cd /opt
 ln -s jdk1.8.0_201 java8
+chown -R root.root jdk1.8.0_201
 
 cat <<EOF > /etc/profile.d/java.sh
 JAVA_HOME=/opt/java8
@@ -35,6 +40,7 @@ tar xvzf ideaIC-2018.3.3.tar.gz
 mv idea-IC-183.5153.38 /opt/idea
 chmod -R g+w /opt/idea
 chown -R root.developers /opt/idea
+
 cat <<EOF > /usr/share/applications/jetbrains-idea-ce.desktop
 [Desktop Entry]
 Version=1.0
@@ -80,6 +86,7 @@ EOF
 
 wget https://dl.pstmn.io/download/latest/linux64
 tar xvzf linux64
+
 mv Postman /opt
 chmod -R g+w /opt/Postman
 chown -R root.developers /opt/Postman
@@ -99,6 +106,7 @@ EOF
 # Maven
 wget https://www.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
 tar xvzf apache-maven-3.6.0-bin.tar.gz
+
 mv apache-maven-3.6.0 /opt
 cd /opt
 ln -s apache-maven-3.6.0 maven
@@ -124,8 +132,10 @@ EOF
 cd ~/software
 
 # Atom Editor
+
 wget https://atom-installer.github.com/v1.34.0/atom.x86_64.rpm
 yum install atom.x86_64.rpm -y
+
 
 ### ================
 ###
