@@ -2,7 +2,7 @@
 # Switch to root
 sudo -i
 
-# After entering your password copy / paste the command below in blocks:
+# After entering your password copy / paste the commands below one line at a time or in blocks:
 
 groupadd developers
 
