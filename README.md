@@ -1,3 +1,4 @@
+```
 sudo -i
 
 groupadd developers
@@ -136,3 +137,4 @@ sudo usermod -aG docker,developers $USER
 ### Then logout and back in or reboot the system
 ### System -> Logout --OR--
 sudo init 6
+```
