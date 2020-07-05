@@ -84,6 +84,20 @@ EOF
 
 # Postman
 
+cat <<EOF > $HOME/.local/share/applications/postman-ade.desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Postman ADE
+Icon=$HOME/Applications/Postman/app/resources/app/assets/icon.png
+Exec="$HOME/Applications/Postman/app/Postman" %f
+Comment=Postman Simplifies API Development
+Categories=IDE;Development
+Terminal=false
+EOF
+
+
+
 wget https://dl.pstmn.io/download/latest/linux64
 tar xvzf linux64
 
